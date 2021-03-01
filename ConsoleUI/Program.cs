@@ -25,7 +25,13 @@ namespace ConsoleUI
                 Console.WriteLine(brand.BrandId + " = " + brand.BrandName);
             }
 
+            Console.WriteLine("----------------");
 
+            ColorManager colorManager = new ColorManager(new EfColorDal());
+            foreach (var color in colorManager.GetAll())
+            {
+                Console.WriteLine(color.ColorId + " = "+ color.ColorName);
+            }
 
         }
 
